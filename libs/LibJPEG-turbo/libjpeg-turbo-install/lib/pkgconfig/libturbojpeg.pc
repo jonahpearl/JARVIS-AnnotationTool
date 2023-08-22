@@ -1,0 +1,10 @@
+prefix=/Users/jonahpearl/Documents/PiN/Datta_lab/Local_code/JARVIS-AnnotationTool/libs/LibJPEG-turbo/libjpeg-turbo-install
+exec_prefix=/Users/jonahpearl/Documents/PiN/Datta_lab/Local_code/JARVIS-AnnotationTool/libs/LibJPEG-turbo/libjpeg-turbo-install
+libdir=/Users/jonahpearl/Documents/PiN/Datta_lab/Local_code/JARVIS-AnnotationTool/libs/LibJPEG-turbo/libjpeg-turbo-install/lib
+includedir=/Users/jonahpearl/Documents/PiN/Datta_lab/Local_code/JARVIS-AnnotationTool/libs/LibJPEG-turbo/libjpeg-turbo-install/include
+
+Name: libturbojpeg
+Description: A SIMD-accelerated JPEG codec that provides the TurboJPEG API
+Version: 2.1.4
+Libs: -L${libdir} -lturbojpeg
+Cflags: -I${includedir}
