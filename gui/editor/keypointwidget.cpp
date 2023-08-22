@@ -198,6 +198,22 @@ void KeypointWidget::advanceCurrentKeypointSlot(){
 	}
 }
 
+void KeypointWidget::devanceCurrentKeypointSlot(){
+	// figure out which keypointList is currently active
+	KeypointListWidget* keypointList = keypointListMap[m_currentEntity];
+	
+	// advance the row to the next keypoint, if possible
+	if (keypointList->currentRow() > 0) {
+		keypointList->setCurrentRow(keypointList->currentRow() - 1);
+		
+		// update the viewer accordingly
+		QColor color = colorMap->getColor(keypointList->currentRow(), keypointList->count());
+		m_currentBodypart = keypointList->item(keypointList->currentRow())->text();
+		emit currentBodypartChanged(m_currentBodypart, color);
+		emit updateViewer();
+	}
+}
+
 void KeypointWidget::unsuppressKeypointSlot(int row) {
 	QListWidget* keypointList = keypointListMap[m_currentEntity];
 	keypointList->item(row)->setIcon(QIcon::fromTheme("no_check"));

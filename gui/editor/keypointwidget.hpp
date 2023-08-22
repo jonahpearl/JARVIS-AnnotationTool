@@ -63,6 +63,7 @@ class KeypointListWidget : public QListWidget {
 		void suppressKeypoint(int row);
 		void unsuppressKeypoint(int row);
 		void advanceCurrentKeypoint();
+		void devanceCurrentKeypoint();
 
 	private:
 		QList<int> m_suppressedList = {};
@@ -151,6 +152,7 @@ class KeypointWidget : public QWidget {
 		void setKeypointsFromDatasetSlot();
 		void toggleCurrentKeypointSlot();
 		void advanceCurrentKeypointSlot();
+		void devanceCurrentKeypointSlot();
 
 	private:
 		ColorMap *colorMap;

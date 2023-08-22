@@ -168,6 +168,7 @@ EditorWidget::EditorWidget(QWidget *parent) : QWidget(parent) {
 	connect(this, &EditorWidget::frameChanged, datasetControlWidget, &DatasetControlWidget::frameChangedSlot);
 	connect(this, &EditorWidget::cmdRPressed, keypointWidget, &KeypointWidget::toggleCurrentKeypointSlot);
 	connect(this, &EditorWidget::cmdEPressed, keypointWidget, &KeypointWidget::advanceCurrentKeypointSlot);
+	connect(this, &EditorWidget::cmd3Pressed, keypointWidget, &KeypointWidget::devanceCurrentKeypointSlot);
 
 	//<-> Relayed Signals
 	connect(datasetControlWidget, &DatasetControlWidget::datasetLoaded, this, &EditorWidget::newSegmentLoaded);
@@ -463,5 +464,8 @@ void EditorWidget::keyPressEvent(QKeyEvent *e)
 	}
 	else if ((key == Qt::Key_E) && (e->modifiers() & Qt::ControlModifier)){
 		emit cmdEPressed();  // will skip currently selected keypoint
+	}
+	else if ((key == Qt::Key_3) && (e->modifiers() & Qt::ControlModifier)){
+		emit cmd3Pressed();  // will go back one keypoint
 	}
 }

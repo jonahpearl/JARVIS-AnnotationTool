@@ -56,6 +56,7 @@ class EditorWidget : public QWidget {
 		void brightnessChanged(int brightnessFactor);
 		void cmdRPressed();  // toggle keypoint suppression
 		void cmdEPressed();  // skip keypoint without any action
+		void cmd3Pressed();  // go back one keypoint without any action
 
 	public slots:
 		void splitterMovedSlot(int pos, int index);
