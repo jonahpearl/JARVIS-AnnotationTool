@@ -48,8 +48,8 @@ if [ "${machine}" = "Mac" ];
 then
   cmake -DOPENCV_ENABLE_ALLOCATOR_STATS=OFF -DCMAKE_BUILD_TYPE=RELEASE \
         -DBUILD_TIFF=OFF -DWITH_TIFF=OFF -DWITH_JPEG=ON -DBUILD_JPEG=OFF \
-        -DJPEG_INCLUDE_DIR=/Users/thueser/Documents/JARVIS-AnnotationTool/libs/LibJPEG-turbo/libjpeg-turbo-install/include \
-        -DJPEG_LIBRARY=/Users/thueser/Documents/JARVIS-AnnotationTool/libs/LibJPEG-turbo/libjpeg-turbo-install/lib/libturbojpeg.a -DBUILD_ZLIB=OFF \
+        -DJPEG_INCLUDE_DIR=/Users/jonahpearl/Documents/PiN/Datta_lab/Local_code/JARVIS-AnnotationTool/libs/LibJPEG-turbo/libjpeg-turbo-install/include \
+        -DJPEG_LIBRARY=/Users/jonahpearl/Documents/PiN/Datta_lab/Local_code/JARVIS-AnnotationTool/libs/LibJPEG-turbo/libjpeg-turbo-install/lib/libturbojpeg.a -DBUILD_ZLIB=OFF \
         -DBUILD_WEBP=OFF -DBUILD_PNG=OFF -DWITH_OPENEXR=OFF -DWITH_OPENJPEG=OFF \
         -DWITH_JASPER=OFF -DWITH_PROTOBUF=OFF -DWITH_QUIRC=OFF -DWITH_1394=OFF \
         -DWITH_V4L=OFF  -DWITH_GSTREAMER=ON -DWITH_FFMPEG=ON -DWITH_GTK=OFF \
